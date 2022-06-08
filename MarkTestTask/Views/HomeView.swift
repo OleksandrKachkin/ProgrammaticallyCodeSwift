@@ -11,26 +11,22 @@ class HomeView: UIView {
   
   // MARK: - Properties
   
-  let progress = Progress(totalUnitCount: 12)
-  
-  private let progressView: UIProgressView = {
+  public let progressView: UIProgressView = {
     let progressView = UIProgressView(frame: CGRect(x: 0, y: 0, width: 300, height: 10))
-    //    progressView.center = view.center
     progressView.progress = 0.1
     progressView.progressTintColor = .red
     progressView.trackTintColor = .green
-    progressView.translatesAutoresizingMaskIntoConstraints = false
     return progressView
   }()
   
   private let imageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "homeView"))
+    let imageView = UIImageView(image: UIImage(named: "homeViewImage"))
     imageView.contentMode = .scaleToFill
-    imageView.translatesAutoresizingMaskIntoConstraints = false
     return imageView
   }()
   
   // MARK: - Inits
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     
@@ -41,32 +37,35 @@ class HomeView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  
-  private func addSubviews() {
-    addSubview(progressView)
-    addSubview(imageView)
-  }
-  
   override func layoutSubviews() {
     super.layoutSubviews()
     
     setConstraints()
   }
   
+  private func addSubviews() {
+    [progressView, imageView].forEach {
+      $0.translatesAutoresizingMaskIntoConstraints = false
+      self.addSubview($0)
+    }
+  }
   
   // MARK: - Set constraints
   
   private func setConstraints() {
-    
+
     NSLayoutConstraint.activate([
-      progressView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-      progressView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+      progressView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+      progressView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
+      progressView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50)
     ])
-    
+
     NSLayoutConstraint.activate([
       imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
       imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-      imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+      imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+      imageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.6)
     ])
   }
+  
 }
