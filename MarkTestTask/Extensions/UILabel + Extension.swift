@@ -8,7 +8,7 @@
 import UIKit
 
 
-//MARK: - Multiple font color in a single label
+//MARK: - Multiple font color in same label
 
 extension UILabel {
   

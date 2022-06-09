@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B095A016284A175E008F405E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095A015284A175E008F405E /* MainViewController.swift */; };
+		B0620AEE2851EDAC0015CEEF /* SavedProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0620AED2851EDAC0015CEEF /* SavedProperties.swift */; };
+		B095A016284A175E008F405E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095A015284A175E008F405E /* TabBarController.swift */; };
 		B0BF30822844E66600A743A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF30812844E66600A743A6 /* AppDelegate.swift */; };
 		B0BF30842844E66600A743A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF30832844E66600A743A6 /* SceneDelegate.swift */; };
 		B0BF30862844E66600A743A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BF30852844E66600A743A6 /* HomeViewController.swift */; };
@@ -33,7 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B095A015284A175E008F405E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B0620AED2851EDAC0015CEEF /* SavedProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedProperties.swift; sourceTree = "<group>"; };
+		B095A015284A175E008F405E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B0BF307E2844E66600A743A6 /* MarkTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0BF30812844E66600A743A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0BF30832844E66600A743A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,13 +94,14 @@
 			children = (
 				B0BF30812844E66600A743A6 /* AppDelegate.swift */,
 				B0BF30832844E66600A743A6 /* SceneDelegate.swift */,
+				B0620AED2851EDAC0015CEEF /* SavedProperties.swift */,
 				B0D4F7CE2850D1C000FB6132 /* Fonts */,
 				B0BF30982845ECD600A743A6 /* Views */,
 				B0BF309528451FE700A743A6 /* Controllers */,
+				B0BF309D2848DE0100A743A6 /* Extensions */,
 				B0BF308A2844E66900A743A6 /* Assets.xcassets */,
 				B0BF308C2844E66900A743A6 /* LaunchScreen.storyboard */,
 				B0BF308F2844E66900A743A6 /* Info.plist */,
-				B0BF309D2848DE0100A743A6 /* Extensions */,
 			);
 			path = MarkTestTask;
 			sourceTree = "<group>";
@@ -108,7 +111,7 @@
 			children = (
 				B0BF30852844E66600A743A6 /* HomeViewController.swift */,
 				B0BF30962845200100A743A6 /* UserViewController.swift */,
-				B095A015284A175E008F405E /* MainViewController.swift */,
+				B095A015284A175E008F405E /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -232,13 +235,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B095A016284A175E008F405E /* MainViewController.swift in Sources */,
+				B095A016284A175E008F405E /* TabBarController.swift in Sources */,
 				B0BF30862844E66600A743A6 /* HomeViewController.swift in Sources */,
 				B0BF30972845200100A743A6 /* UserViewController.swift in Sources */,
 				B0D4F7CD2850A40100FB6132 /* UserView.swift in Sources */,
 				B0BF309C2848DDF900A743A6 /* UIView + Extension.swift in Sources */,
 				B0BF30822844E66600A743A6 /* AppDelegate.swift in Sources */,
 				B0D4F7EA2851061300FB6132 /* UILabel + Extension.swift in Sources */,
+				B0620AEE2851EDAC0015CEEF /* SavedProperties.swift in Sources */,
 				B0BF309A2845ED1000A743A6 /* HomeView.swift in Sources */,
 				B0BF30842844E66600A743A6 /* SceneDelegate.swift in Sources */,
 			);

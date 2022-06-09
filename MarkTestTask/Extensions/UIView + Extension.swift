@@ -9,6 +9,8 @@ import UIKit
 
 extension UIView {
   
+  // MARK: - Constraints
+  
   func anchor(top: NSLayoutYAxisAnchor? = nil,
               left: NSLayoutXAxisAnchor? = nil,
               bottom: NSLayoutYAxisAnchor? = nil,

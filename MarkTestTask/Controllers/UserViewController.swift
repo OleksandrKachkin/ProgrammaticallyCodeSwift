@@ -99,25 +99,26 @@ extension UserViewController: UIImagePickerControllerDelegate, UINavigationContr
     userView.nameField.becomeFirstResponder()
   }
   
-  // метод UserViewDelegate: переход на следующий ВК
+  // метод UserViewDelegate: переход на UITabBarController
   func didTapNextVC() {
-    let mainVC = MainViewController()
-    //    mainVC.title = "Mark Test Task"
-    mainVC.modalPresentationStyle = .fullScreen
-    mainVC.modalTransitionStyle = .crossDissolve
-    self.present(mainVC, animated: true, completion: nil)
+    
+    let tabBarVC = TabBarController()
+    tabBarVC.modalPresentationStyle = .fullScreen
+    tabBarVC.modalTransitionStyle = .crossDissolve
+    present(tabBarVC, animated: true)
   }
   
   // метод UserViewDelegate: проверяет и сохраняет
   func didTapSaveButton() {
     userView.nameField.resignFirstResponder()
-    guard let name = userView.nameField.text, let picture = userView.profileImageView.image, !name.isEmpty  else {
+    guard let name = userView.nameField.text, !name.isEmpty  else {
       alertUserNameError()
       return
     }
-      // UserDefault saves name and pictures
-      
-      didTapNextVC()
+    // UserDefault saves name
+    SavedProperties.userName = name
+    
+    didTapNextVC()
     
   }
   

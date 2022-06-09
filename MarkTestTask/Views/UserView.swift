@@ -196,7 +196,6 @@ class UserView: UIView {
       welcomeLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
       welcomeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
       welcomeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//      welcomeLabel.heightAnchor.constraint(equalToConstant: 40)
     ])
     
     // appGamingLabel constraints
@@ -204,7 +203,6 @@ class UserView: UIView {
       appGamingLabel.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: -10),
       appGamingLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
       appGamingLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//      appGamingLabel.heightAnchor.constraint(equalToConstant: 35)
     ])
     
     // profileView constraints

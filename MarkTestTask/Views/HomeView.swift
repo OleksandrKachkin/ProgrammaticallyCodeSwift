@@ -20,8 +20,9 @@ class HomeView: UIView {
   }()
   
   private let imageView: UIImageView = {
-    let imageView = UIImageView(image: UIImage(named: "homeViewImage"))
-    imageView.contentMode = .scaleToFill
+    let imageArray = ["1", "2", "3", "4"]
+    let imageView = UIImageView(image: UIImage(named: imageArray[Int.random(in: 0..<imageArray.count)]))
+    imageView.contentMode = .scaleAspectFill
     return imageView
   }()
   
@@ -55,7 +56,7 @@ class HomeView: UIView {
   private func setConstraints() {
 
     NSLayoutConstraint.activate([
-      progressView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
+      progressView.topAnchor.constraint(equalTo: self.topAnchor, constant: 150),
       progressView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 50),
       progressView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50)
     ])
